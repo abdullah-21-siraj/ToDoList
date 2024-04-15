@@ -31,8 +31,4 @@ To run ListApp locally, follow these steps:
 
 ## Author
 
-[ListApp](https://github.com/yourusername/ListApp) was developed by [Your Name](https://github.com/yourusername).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[ListApp](https://github.com/yourusername/ListApp) was developed by Abdullah(https://github.com/yourusername).
