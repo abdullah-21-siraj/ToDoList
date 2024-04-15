@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ListApp
 
-## Getting Started
+ListApp is a simple To-Do List application built using React and Firebase Firestore.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Add tasks to your to-do list.
+- Delete tasks from your to-do list.
+- Real-time synchronization with Firebase Firestore.
+- Clean and intuitive user interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run ListApp locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone this repository to your local machine.
+2. Install dependencies using `npm install` or `yarn install`.
+3. Configure Firebase Firestore by adding your Firebase configuration to `firebase.js`.
+4. Run the application using `npm start` or `yarn start`.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Enter the task you want to add to your to-do list in the input field.
+2. Click the "+" button or press Enter to add the task to your list.
+3. Click the "X" button next to a task to delete it from your list.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- React
+- Firebase Firestore
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[ListApp](https://github.com/yourusername/ListApp) was developed by Abdullah(https://github.com/abdullah-21-siraj).
