@@ -8,13 +8,21 @@ import {
   doc,
 } from "firebase/firestore";
 import { db } from "./firebase";
+import { firestore } from "./firebase"; // Assuming "firestore" is imported from "./firebase"
+
+interface ListItem {
+  id: string;
+  name: string;
+}
 
 export default function ListApp() {
-  const [list, setList] = useState([]);
-  const [newList, setNewList] = useState({ listName: "" });
+  const [list, setList] = useState<ListItem[]>([]);
+  const [newList, setNewList] = useState<{ listName: string }>({
+    listName: "",
+  });
 
   // Add List to database
-  const addList = async (e) => {
+  const addList = async (e: React.FormEvent) => {
     e.preventDefault();
     if (newList.listName !== "") {
       await addDoc(collection(db, "Lists"), {
@@ -27,10 +35,10 @@ export default function ListApp() {
   // Read Lists from database
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "Lists"), (querySnapshot) => {
-      let listsArr = [];
+      let listsArr: ListItem[] = [];
 
       querySnapshot.forEach((doc) => {
-        listsArr.push({ ...doc.data(), id: doc.id });
+        listsArr.push({ ...doc.data(), id: doc.id } as ListItem);
       });
       setList(listsArr);
     });
@@ -39,7 +47,7 @@ export default function ListApp() {
   }, []);
 
   // Delete Lists from database
-  const deleteList = async (id) => {
+  const deleteList = async (id: string) => {
     await deleteDoc(doc(db, "Lists", id));
   };
 
@@ -50,7 +58,7 @@ export default function ListApp() {
           To Do List
         </h1>
         <div className="bg-white p-4 rounded-lg shadow-md">
-          <form className="grid grid-cols-6 gap-4">
+          <form className="grid grid-cols-6 gap-4" onSubmit={addList}>
             <input
               value={newList.listName}
               onChange={(e) =>
@@ -61,9 +69,8 @@ export default function ListApp() {
               placeholder="Enter list of work to do..."
             />
             <button
-              onClick={addList}
-              className="col-span-1 flex items-center justify-center text-white bg-blue-500 hover:bg-blue-600 p-3 rounded-md"
               type="submit"
+              className="col-span-1 flex items-center justify-center text-white bg-blue-500 hover:bg-blue-600 p-3 rounded-md"
             >
               <span className="text-xl">+</span>
             </button>
