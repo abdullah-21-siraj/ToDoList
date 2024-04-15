@@ -8,7 +8,6 @@ import {
   doc,
 } from "firebase/firestore";
 import { db } from "./firebase";
-import { firestore } from "./firebase"; // Assuming "firestore" is imported from "./firebase"
 
 interface ListItem {
   id: string;
