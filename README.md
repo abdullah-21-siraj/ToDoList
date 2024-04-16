@@ -31,4 +31,4 @@ To run ListApp locally, follow these steps:
 
 ## Author
 
-[ListApp](https://github.com/yourusername/ListApp) was developed by Abdullah(https://github.com/abdullah-21-siraj).
+[ListApp](https://todolist-two-pearl.vercel.app/) was developed by [Abdullah](https://github.com/abdullah-21-siraj).
